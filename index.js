@@ -5,7 +5,7 @@ const { prefix } = require('./config.json');
 const { token } = require('./token.json');
 const synccommands = require('./synccommands');
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
 
 client.commands = new Collection();
 const foldersPath = path.join(__dirname, 'slash-commands');
